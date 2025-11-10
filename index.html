@@ -6,6 +6,7 @@
   <title>CloudLink — Cloud accounting, simplified.</title>
   <meta name="description" content="CloudLink — Cloud accounting, simplified. Online accounting services for sole traders and small businesses — secure, compliant, and managed in the cloud." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --green: #0B6534;
@@ -15,6 +16,7 @@
       --white: #FFFFFF;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Open Sans', sans-serif;
       background: var(--light);
@@ -46,6 +48,7 @@
       font-weight: 600;
     }
     nav a:hover { color: var(--green); }
+
     .hero {
       text-align: center;
       padding: 120px 20px 80px;
@@ -101,6 +104,56 @@
       font-weight: 600;
       margin-bottom: 10px;
     }
+
+    .contact {
+      background: var(--light);
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .contact h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1rem;
+      color: #444;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #D1D5DB;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    textarea { resize: vertical; height: 120px; }
+    button {
+      background: var(--green);
+      color: var(--white);
+      padding: 12px 28px;
+      border: none;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover { background: #12854A; }
+
     .assurance {
       background: var(--sage);
       color: var(--dark);
@@ -123,8 +176,8 @@
     <div class="logo">CloudLink</div>
     <nav>
       <a href="#services">Services</a>
-      <a href="#assurance">Compliance</a>
       <a href="#contact">Contact</a>
+      <a href="#assurance">Compliance</a>
     </nav>
   </header>
 
@@ -136,28 +189,45 @@
 
   <section id="services" class="services">
     <div class="card">
+      <h3>Cloud Accounting Platform</h3>
+      <p>Collaborative cloud software allowing shared access between accountant and client — keeping records accurate and transparent in real time.</p>
+    </div>
+    <div class="card">
       <h3>Bookkeeping & VAT</h3>
-      <p>Accurate digital record keeping and quarterly VAT submissions, fully compliant with Making Tax Digital.</p>
+      <p>Accurate digital record keeping, reconciliations, and VAT submissions in line with HMRC’s Making Tax Digital requirements.</p>
     </div>
     <div class="card">
-      <h3>Payroll & CIS</h3>
-      <p>Seamless payroll management and CIS returns — all filed securely and on time.</p>
+      <h3>Statutory Obligations</h3>
+      <p>Preparation of year-end accounts, filings, and statutory documentation to ensure your business stays compliant and on schedule.</p>
     </div>
     <div class="card">
-      <h3>Accounts & Tax</h3>
-      <p>Year-end accounts, self-assessment, and corporation tax preparation handled with precision.</p>
+      <h3>AI & Automation</h3>
+      <p>Integrating intelligent accounting software to simplify data entry, speed up reconciliations, and ease the ongoing management of your accounts.</p>
     </div>
-    <div class="card">
-      <h3>Compliance & Advice</h3>
-      <p>ICB-licensed and AML-supervised practice providing trusted compliance and accounting support.</p>
-    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Discuss your accounting requirements — we’ll tailor a secure, compliant solution for your business.</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <section id="assurance" class="assurance">
     Secure, compliant, and fully insured. Licensed and supervised by the Institute of Certified Bookkeepers (ICB).
   </section>
 
-  <footer id="contact">
+  <footer>
     <p><strong>CloudLink</strong> — Cloud accounting, simplified.</p>
     <p>Email: <a href="mailto:info@cloudlinkbookkeeping.co.uk">info@cloudlinkbookkeeping.co.uk</a>  
     | LinkedIn: <a href="#">CloudLink</a>  
@@ -167,4 +237,3 @@
   </footer>
 </body>
 </html>
-
