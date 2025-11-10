@@ -175,9 +175,7 @@
   <header>
     <div class="logo">CloudLink</div>
     <nav>
-      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
-      <a href="#assurance">Compliance</a>
     </nav>
   </header>
 
@@ -210,6 +208,9 @@
     <h2>Contact Us</h2>
     <p>Discuss your accounting requirements — we’ll tailor a secure, compliant solution for your business.</p>
     <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="hidden" name="_subject" value="New CloudLink Contact" />
+      <input type="hidden" name="_redirect" value="https://amcbhome.github.io/cloudlink/thank-you.html" />
+      
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -237,3 +238,4 @@
   </footer>
 </body>
 </html>
+
