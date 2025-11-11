@@ -165,6 +165,33 @@
       font-size: 0.9rem;
     }
 
+    /* ===== WhatsApp Button ===== */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+
     @media (max-width: 768px) {
       header {
         padding: 80px 15px 60px;
@@ -197,9 +224,9 @@
         <div class="service-box">
           <h3>Bookkeeping & Digital Records</h3>
           <p>
-            Daily transaction recording, bank reconciliation and expense tracking — all
-            through secure cloud platforms such as Xero, QuickBooks and FreeAgent. We
-            ensure your books are accurate and Making Tax Digital (MTD) compliant.
+            Daily transaction recording, bank reconciliation and expense tracking —
+            through secure cloud platforms such as Xero, QuickBooks and FreeAgent.
+            We ensure your books are accurate and Making Tax Digital (MTD) compliant.
           </p>
         </div>
         <div class="service-box">
@@ -258,9 +285,18 @@
   </section>
 
   <footer>
-    &copy; 2025 CloudLink Accounting. All rights reserved. <br />
+    &copy; 2025 CloudLink Accounting. All rights reserved.<br />
     AAT Licensed Bookkeeper | Based in Kilmarnock, Ayrshire
   </footer>
+
+  <!-- ===== WhatsApp Floating Button ===== -->
+  <a href="https://wa.me/447895770953" 
+     class="whatsapp-float" 
+     target="_blank" 
+     aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp" />
+  </a>
 </body>
 </html>
 
