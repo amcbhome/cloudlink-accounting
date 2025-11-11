@@ -1,240 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CloudLink — Cloud accounting, simplified.</title>
-  <meta name="description" content="CloudLink — Cloud accounting, simplified. Online accounting services for sole traders and small businesses — secure, compliant, and managed in the cloud." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudLink Accounting | Cloud accounting, simplified</title>
   <style>
-    :root {
-      --green: #0B6534;
-      --sage: #A8D5BA;
-      --light: #F8F9F5;
-      --dark: #333333;
-      --white: #FFFFFF;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    /* ===== Global Styles ===== */
     body {
-      font-family: 'Open Sans', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #333;
     }
+
     header {
-      background: var(--white);
-      border-bottom: 1px solid #E5E7EB;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .logo {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: var(--green);
-    }
-    nav a {
-      color: var(--dark);
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 600;
-    }
-    nav a:hover { color: var(--green); }
-
-    .hero {
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      color: white;
       text-align: center;
-      padding: 120px 20px 80px;
-      background: var(--light);
-    }
-    .hero h1 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 3rem;
-      color: var(--green);
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #444;
-      max-width: 650px;
-      margin: 0 auto 30px;
-    }
-    .btn {
-      display: inline-block;
-      background: var(--green);
-      color: var(--white);
-      padding: 12px 28px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    .btn:hover { background: #12854A; }
-
-    .services {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      padding: 80px 40px;
-      background: var(--white);
-    }
-    .card {
-      background: var(--light);
-      border: 1px solid #E5E7EB;
-      border-radius: 16px;
-      padding: 30px;
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .card h3 {
-      color: var(--green);
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      margin-bottom: 10px;
+      padding: 100px 20px 80px;
     }
 
-    .contact {
-      background: var(--light);
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .contact h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.8rem;
-      color: var(--green);
+    header h1 {
+      font-size: 2.8rem;
       margin-bottom: 10px;
+      letter-spacing: 0.5px;
     }
-    .contact p {
-      max-width: 600px;
-      margin: 0 auto 30px;
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #0077b6;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
       font-size: 1rem;
-      color: #444;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
-    form {
+
+    .btn-primary:hover {
+      background: #caf0f8;
+      color: #023e8a;
+    }
+
+    /* ===== Services Section ===== */
+    .services {
+      background: #f9fbfd;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #1d3557;
+    }
+
+    .services h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      margin: 10px auto 0 auto;
+      border-radius: 2px;
+    }
+
+    .services .intro {
+      max-width: 750px;
+      margin: 0 auto 40px auto;
+      font-size: 1.05rem;
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .service-box {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 30px 25px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 360px;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .service-box h3 {
+      color: #0077b6;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .service-box p {
+      font-size: 0.97rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* ===== Contact Section ===== */
+    .contact {
+      padding: 80px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      color: #1d3557;
+      margin-bottom: 20px;
+    }
+
+    .contact form {
       max-width: 600px;
       margin: 0 auto;
-      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #D1D5DB;
-      border-radius: 8px;
-      margin-bottom: 16px;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    textarea { resize: vertical; height: 120px; }
-    button {
-      background: var(--green);
-      color: var(--white);
-      padding: 12px 28px;
-      border: none;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover { background: #12854A; }
 
-    .assurance {
-      background: var(--sage);
-      color: var(--dark);
-      text-align: center;
-      padding: 60px 20px;
-      font-weight: 600;
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
     }
+
+    .contact button {
+      align-self: center;
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact button:hover {
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+    }
+
     footer {
-      background: var(--green);
-      color: var(--white);
-      padding: 40px 20px;
       text-align: center;
-      font-size: 0.95rem;
+      background: #1d3557;
+      color: white;
+      padding: 25px 10px;
+      font-size: 0.9rem;
     }
-    footer a { color: var(--white); text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 80px 15px 60px;
+      }
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="logo">CloudLink</div>
-    <nav>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>CloudLink Accounting</h1>
+    <p>Cloud accounting, simplified</p>
+    <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+      Get Started
+    </button>
   </header>
 
-  <section class="hero">
-    <h1>Cloud accounting, simplified.</h1>
-    <p>Online accounting services for sole traders and small businesses — secure, compliant, and managed in the cloud.</p>
-    <a href="#contact" class="btn">Get Started</a>
-  </section>
-
   <section id="services" class="services">
-    <div class="card">
-      <h3>Cloud Accounting Platform</h3>
-      <p>Collaborative cloud software allowing shared access between accountant and client — keeping records accurate and transparent in real time.</p>
-    </div>
-    <div class="card">
-      <h3>Bookkeeping & VAT</h3>
-      <p>Accurate digital record keeping, reconciliations, and VAT submissions in line with HMRC’s Making Tax Digital requirements.</p>
-    </div>
-    <div class="card">
-      <h3>AI & Automation</h3>
-      <p>Integrating intelligent accounting software to simplify data entry, speed up reconciliations, and ease the ongoing management of your accounts.</p>
-    </div>
-    <div class="card">
-      <h3>Year-End Accounts</h3>
-      <p>Preparation of annual accounts, filings, and compliance documentation to ensure your business stays accurate, compliant, and on schedule.</p>
+    <div class="container">
+      <h2>Our Services</h2>
+      <p class="intro">
+        CloudLink Accounting provides AAT-licensed bookkeeping and digital compliance
+        services for sole traders and small businesses. Our goal is to keep your
+        finances clear, compliant and connected.
+      </p>
+      <div class="service-grid">
+        <div class="service-box">
+          <h3>Bookkeeping & Digital Records</h3>
+          <p>
+            Daily transaction recording, bank reconciliation and expense tracking — all
+            through secure cloud platforms such as Xero, QuickBooks and FreeAgent. We
+            ensure your books are accurate and Making Tax Digital (MTD) compliant.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>VAT Returns & Compliance</h3>
+          <p>
+            Preparation and submission of VAT returns, advice on VAT schemes, and
+            liaison with HMRC. We handle the detail so your business stays compliant
+            and stress-free.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>Payroll & PAYE Support</h3>
+          <p>
+            Payroll processing, RTI submissions and PAYE/NIC guidance. We make sure
+            your employees are paid correctly and on time — every time.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>Accounts Preparation</h3>
+          <p>
+            Non-statutory accounts for sole traders and partnerships. Clear,
+            professional reports to help you understand your business performance and
+            plan ahead.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>Cloud Software Setup & Training</h3>
+          <p>
+            New to cloud accounting? We’ll set up your software, configure bank feeds,
+            and show you how to access your figures in real time — from anywhere.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>Management Reporting</h3>
+          <p>
+            Periodic profit and cash-flow snapshots with insights into trends and cost
+            control. Make informed decisions backed by accurate data.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Discuss your accounting requirements — we’ll tailor a secure, compliant solution for your business.</p>
-    <form action="https://formspree.io/f/xzzyplyo" method="POST">
-      <input type="hidden" name="_subject" value="New CloudLink Contact" />
-      <input type="hidden" name="_redirect" value="https://amcbhome.github.io/cloudlink/thank-you.html" />
-      
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p>
+      Ready to take the stress out of bookkeeping? Let's schedule a free
+      30-minute consultation to discuss your needs.
+    </p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <section id="assurance" class="assurance">
-    Secure, compliant, and fully insured. Licensed and supervised by the Institute of Certified Bookkeepers (ICB).
-  </section>
-
   <footer>
-    <p><strong>CloudLink</strong> — Cloud accounting, simplified.</p>
-    <p>Email: <a href="mailto:info@cloudlinkbookkeeping.co.uk">info@cloudlinkbookkeeping.co.uk</a>  
-    | LinkedIn: <a href="#">CloudLink</a>  
-    | Location: Kilmarnock, Ayrshire, Scotland</p>
-    <p>Licensed ICB practice • AML supervised • PII insured • GDPR compliant</p>
-    <p>&copy; 2025 CloudLink. All rights reserved.</p>
+    &copy; 2025 CloudLink Accounting. All rights reserved. <br />
+    AAT Licensed Bookkeeper | Based in Kilmarnock, Ayrshire
   </footer>
 </body>
 </html>
